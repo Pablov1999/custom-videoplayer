@@ -1,0 +1,131 @@
+body {
+    align-items: center;
+    background: #000046;
+    background: linear-gradient(to right, #c118c7, #b30e0e); 
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+.player {
+    border: 6px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.1), 0 3px 3px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.player-video {
+    width: 700px;
+    height: 395px;
+}
+
+.player-video-fullscreen {
+    width: 100%;
+    height: 100%;
+}
+
+.player-fullscreen {
+    max-width: none;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.player-controls {
+    align-items: center;
+    display: flex;
+    position: absolute;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    bottom: 0;
+    width: 100%;
+    height: 10%;
+    transform: translateY(100%) translateY(-5px);
+    transition: all 0.4s;
+    background: rgba(0, 0, 0, 0.658);
+    visibility: hidden;
+}
+
+.player-controls {
+    flex: 1;
+}
+
+.progress {
+    position: relative;
+    display: flex;
+    flex: 10;
+    flex-basis: 100%;
+    height: 4px;
+    transition: height 0.4s;
+    background: rgba(0, 0, 0, 0.5);
+    visibility: hidden;
+}
+  
+.progress-filled {
+    width: 50%;
+    background: #96dd24;
+    flex: 0;
+}
+
+.player:hover .player-controls {
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.player:hover .progress {
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.progress {
+    height: 5px;
+}
+
+.arrow {
+    position: fixed;
+    background-color: transparent;
+    color: #fff;
+    padding: 20px;
+    font-size: 30px;
+    border: 2px solid #FFEC41;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.arrow-hidden {
+    visibility: hidden;
+}
+  
+.arrow:focus {
+    outline: 0;
+}
+  
+.left-arrow {
+    left: calc(15vw - 10px);
+}
+  
+.right-arrow {
+    right: calc(15vw - 10px);
+}
+
+.arrow:hover,
+.arrow:focus {
+    color: #FFEC41;
+}
+
+.player-button {
+    background: none;
+    border: 0;
+    color: #eeeeee;
+    text-align: center;
+    max-width: 60px;
+    padding: 5px 8px;
+}
+
+.player-button:hover,
+.player-button:focus {
+    color: #248add;
+}
